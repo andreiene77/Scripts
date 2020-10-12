@@ -44,8 +44,12 @@ def autorganize_stuff():
 def move_to_assigned_folder(file_format, file_path, file_name):
     directory_path = Path(FILE_FORMATS[file_format])
     directory_path.mkdir(exist_ok=True)
-    shutil.move(file_path, str(directory_path) + '/' + file_name)
+    new_path = str(directory_path) + '/' + file_name
+    shutil.move(file_path, new_path)
+    print("Moving " + file_path + " to " + new_path + ".")
 
 
 if __name__ == "__main__":
+    print("Autorganization started.")
     autorganize_stuff()
+    print("Done.")
