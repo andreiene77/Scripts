@@ -46,7 +46,7 @@ def move_to_assigned_folder(file_format, file_path, file_name):
     directory_path.mkdir(exist_ok=True)
     new_path = str(directory_path) + '/' + file_name
     shutil.move(file_path, new_path)
-    print("Moving " + file_path + " to " + new_path + ".")
+    print("Moving " + str(file_path) + " to " + new_path + ".")
 
 
 if __name__ == "__main__":
